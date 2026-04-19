@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pharmacore"
+version = "0.1.0"
+description = "Apple Silicon-native AI platform for drug discovery — fully local, from target to lead"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = [
+    "torch>=2.0",
+    "rdkit",
+    "numpy",
+    "pandas",
+    "scipy",
+    "tqdm",
+    "click",
+    "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+apple = ["mlx"]
+admet = ["deepchem"]
+protein = ["fair-esm"]
+
+[project.scripts]
+pharmacore = "pharmacore.cli:main"

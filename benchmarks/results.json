@@ -1,0 +1,87 @@
+{
+  "system": {
+    "platform": "macOS-26.4.1-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.13",
+    "torch": "2.11.0",
+    "device": "mps",
+    "mps_available": true,
+    "mlx_available": false,
+    "system": "Darwin",
+    "machine": "arm64",
+    "chip": "Apple M4",
+    "memory_gb": 16.0,
+    "cpu_cores": 10
+  },
+  "benchmarks": [
+    {
+      "name": "device_detection",
+      "iterations": 100,
+      "total_seconds": 0.0,
+      "per_call_ms": 0.0,
+      "device": "mps"
+    },
+    {
+      "name": "smiles_parsing",
+      "molecules": 100,
+      "total_seconds": 0.0864,
+      "molecules_per_second": 1157.8
+    },
+    {
+      "name": "descriptor_computation",
+      "iterations": 500,
+      "total_seconds": 0.0421,
+      "per_molecule_ms": 0.084
+    },
+    {
+      "name": "fingerprint_generation",
+      "results": {
+        "morgan": {
+          "iterations": 500,
+          "total_seconds": 0.0062,
+          "per_call_ms": 0.012
+        },
+        "maccs": {
+          "iterations": 500,
+          "total_seconds": 0.0623,
+          "per_call_ms": 0.125
+        },
+        "rdkit": {
+          "iterations": 500,
+          "total_seconds": 0.0751,
+          "per_call_ms": 0.15
+        }
+      }
+    },
+    {
+      "name": "drug_likeness_check",
+      "iterations": 500,
+      "total_seconds": 0.0192,
+      "per_molecule_ms": 0.038
+    },
+    {
+      "name": "admet_prediction",
+      "molecules": 100,
+      "total_seconds": 0.017,
+      "per_molecule_ms": 0.17
+    },
+    {
+      "name": "molecule_generation",
+      "requested": 50,
+      "generated": 50,
+      "total_seconds": 0.0711,
+      "per_molecule_ms": 1.421
+    },
+    {
+      "name": "pipeline_e2e",
+      "stages": [
+        "target",
+        "generation",
+        "admet",
+        "ranking"
+      ],
+      "molecules": 20,
+      "total_seconds": 0.0082
+    }
+  ]
+}

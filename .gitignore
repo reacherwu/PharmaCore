@@ -1,0 +1,45 @@
+# Hermes
+.hermes/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+*.whl
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Environment
+.env
+.env.local
+
+# Models & checkpoints
+models/
+*.ckpt
+*.pt
+*.pth
+
+# Testing / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
