@@ -1,0 +1,155 @@
+{
+  "model": "/tmp/esm2_35m",
+  "sparsity_target": 0.7,
+  "pruning_target": "all",
+  "pre_pruning": {
+    "total_params": 33500401,
+    "zero_params": 673,
+    "sparsity_pct": 0.0,
+    "top_layers": {
+      "embeddings.word_embeddings.weight": {
+        "total": 15840,
+        "zeros": 0,
+        "sparsity": 0.0
+      },
+      "encoder.layer.0.attention.self.query.weight": {
+        "total": 230400,
+        "zeros": 0,
+        "sparsity": 0.0
+      },
+      "encoder.layer.0.attention.self.key.weight": {
+        "total": 230400,
+        "zeros": 0,
+        "sparsity": 0.0
+      },
+      "encoder.layer.0.attention.self.value.weight": {
+        "total": 230400,
+        "zeros": 0,
+        "sparsity": 0.0
+      },
+      "encoder.layer.0.attention.output.dense.weight": {
+        "total": 230400,
+        "zeros": 0,
+        "sparsity": 0.0
+      },
+      "encoder.layer.0.intermediate.dense.weight": {
+        "total": 921600,
+        "zeros": 0,
+        "sparsity": 0.0
+      },
+      "encoder.layer.0.intermediate.dense.bias": {
+        "total": 1920,
+        "zeros": 0,
+        "sparsity": 0.0
+      },
+      "encoder.layer.0.output.dense.weight": {
+        "total": 921600,
+        "zeros": 1,
+        "sparsity": 0.0
+      },
+      "encoder.layer.1.attention.self.query.weight": {
+        "total": 230400,
+        "zeros": 0,
+        "sparsity": 0.0
+      },
+      "encoder.layer.1.attention.self.key.weight": {
+        "total": 230400,
+        "zeros": 0,
+        "sparsity": 0.0
+      }
+    }
+  },
+  "post_pruning": {
+    "total_params": 33500401,
+    "zero_params": 23386259,
+    "sparsity_pct": 69.81,
+    "top_layers": {
+      "encoder.layer.0.attention.self.query.weight": {
+        "total": 230400,
+        "zeros": 161280,
+        "sparsity": 70.0
+      },
+      "encoder.layer.0.attention.self.key.weight": {
+        "total": 230400,
+        "zeros": 161280,
+        "sparsity": 70.0
+      },
+      "encoder.layer.0.attention.self.value.weight": {
+        "total": 230400,
+        "zeros": 161280,
+        "sparsity": 70.0
+      },
+      "encoder.layer.0.attention.output.dense.weight": {
+        "total": 230400,
+        "zeros": 161280,
+        "sparsity": 70.0
+      },
+      "encoder.layer.0.intermediate.dense.weight": {
+        "total": 921600,
+        "zeros": 645120,
+        "sparsity": 70.0
+      },
+      "encoder.layer.0.output.dense.weight": {
+        "total": 921600,
+        "zeros": 645120,
+        "sparsity": 70.0
+      },
+      "encoder.layer.1.attention.self.query.weight": {
+        "total": 230400,
+        "zeros": 161280,
+        "sparsity": 70.0
+      },
+      "encoder.layer.1.attention.self.key.weight": {
+        "total": 230400,
+        "zeros": 161280,
+        "sparsity": 70.0
+      },
+      "encoder.layer.1.attention.self.value.weight": {
+        "total": 230400,
+        "zeros": 161280,
+        "sparsity": 70.0
+      },
+      "encoder.layer.1.attention.output.dense.weight": {
+        "total": 230400,
+        "zeros": 161280,
+        "sparsity": 70.0
+      }
+    }
+  },
+  "quality": {
+    "per_protein_cosine_similarity": {
+      "insulin_human": 0.8390989899635315,
+      "insulin_mouse": 0.8404070138931274,
+      "egfr_fragment": 0.8494930267333984,
+      "p53_fragment": 0.8550019860267639,
+      "hemoglobin_a": 0.909367024898529,
+      "lysozyme": 0.873075008392334,
+      "ubiquitin": 0.7356659770011902,
+      "cytochrome_c": 0.8452519774436951
+    },
+    "average_cosine_similarity": 0.84342,
+    "pairwise_rank_correlation": 0.524904,
+    "insulin_pair_similarity": 0.993633
+  },
+  "benchmark_original": {
+    "device": "mps",
+    "n_runs": 20,
+    "mean_ms": 8.59,
+    "std_ms": 0.44,
+    "min_ms": 8.13,
+    "max_ms": 9.59,
+    "throughput_seqs_per_sec": 116.4
+  },
+  "benchmark_sparse": {
+    "device": "mps",
+    "n_runs": 20,
+    "mean_ms": 6.24,
+    "std_ms": 0.24,
+    "min_ms": 5.86,
+    "max_ms": 6.75,
+    "throughput_seqs_per_sec": 160.4
+  },
+  "speedup": 1.377,
+  "device": "mps",
+  "torch_version": "2.11.0"
+}

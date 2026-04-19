@@ -160,12 +160,28 @@ Measured on Apple M4 (10-core, 16GB unified memory):
 | Molecule Generation | 0.15 ms/molecule |
 | Full Pipeline (20 mol) | 8.9 ms total |
 
+## ESM-2 Sparsification Research
+
+We performed the first systematic study of magnitude pruning on ESM-2 protein language models,
+targeting Apple Silicon deployment. Full results in [`docs/sparsification_report.md`](docs/sparsification_report.md).
+
+| Model | Sparsity | Cosine Sim | Rank Corr | Insulin Pair | Speedup |
+|-------|----------|-----------|-----------|-------------|---------|
+| ESM-2-8M | 30% | 0.8409 | 0.7367 | 0.9794 | 1.02x |
+| ESM-2-8M | 50% | 0.7928 | 0.7384 | 0.9823 | 0.98x |
+| ESM-2-35M | 30% | 0.9646 | 0.9535 | 0.9756 | 1.43x |
+| ESM-2-35M | 50% | 0.9005 | 0.5583 | 0.9956 | 1.42x |
+| ESM-2-35M | 70% | 0.8434 | 0.5249 | 0.9936 | 1.38x |
+
+Key finding: ESM-2-35M retains 90% embedding quality at 50% sparsity with 1.4x speedup on MPS.
+
 ## Roadmap
 
 ### v0.2.0 — Model Integration
+- [x] ESM-2 sparsification ablation study (8M, 35M)
 - [ ] ESM-2-650M protein embeddings with MPS acceleration
 - [ ] DiffDock molecular docking with learned scoring
-- [ ] Sparsified ESM-2-15B for 16GB Macs (novel contribution)
+- [ ] Sparsified ESM-2-15B for 16GB Macs
 
 ### v0.3.0 — Advanced Generation
 - [ ] Diffusion-based de novo molecular generation

@@ -32,11 +32,13 @@ env/
 .env
 .env.local
 
-# Models & checkpoints
-models/
-*.ckpt
-*.pt
-*.pth
+# Models & checkpoints (keep JSON results)
+models/**/*.safetensors
+models/**/*.bin
+models/**/*.ckpt
+models/**/*.pt
+models/**/*.pth
+!models/**/*.json
 
 # Testing / Coverage
 .pytest_cache/

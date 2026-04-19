@@ -1,0 +1,1250 @@
+[
+  {
+    "model": "facebook/esm2_t6_8M_UR50D",
+    "sparsity_target": 0.3,
+    "pruning_target": "all",
+    "pre_pruning": {
+      "total_params": 7511801,
+      "zero_params": 397,
+      "sparsity_pct": 0.01,
+      "top_layers": {
+        "embeddings.word_embeddings.weight": {
+          "total": 10560,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 409600,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.bias": {
+          "total": 1280,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 409600,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        }
+      }
+    },
+    "post_pruning": {
+      "total_params": 7511801,
+      "zero_params": 2242955,
+      "sparsity_pct": 29.86,
+      "top_layers": {
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 30720,
+          "sparsity": 30.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 30720,
+          "sparsity": 30.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 102400,
+          "zeros": 30720,
+          "sparsity": 30.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 102400,
+          "zeros": 30720,
+          "sparsity": 30.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 409600,
+          "zeros": 122880,
+          "sparsity": 30.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 409600,
+          "zeros": 122880,
+          "sparsity": 30.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 30720,
+          "sparsity": 30.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 30720,
+          "sparsity": 30.0
+        },
+        "encoder.layer.1.attention.self.value.weight": {
+          "total": 102400,
+          "zeros": 30720,
+          "sparsity": 30.0
+        },
+        "encoder.layer.1.attention.output.dense.weight": {
+          "total": 102400,
+          "zeros": 30720,
+          "sparsity": 30.0
+        }
+      }
+    },
+    "quality": {
+      "per_protein_cosine_similarity": {
+        "insulin_human": 0.8284040093421936,
+        "insulin_mouse": 0.801023006439209,
+        "egfr_fragment": 0.8395450115203857,
+        "p53_fragment": 0.8588669896125793,
+        "hemoglobin_a": 0.8823660016059875,
+        "lysozyme": 0.8342700004577637,
+        "ubiquitin": 0.8207060098648071,
+        "cytochrome_c": 0.8619329929351807
+      },
+      "average_cosine_similarity": 0.840889,
+      "pairwise_rank_correlation": 0.736727,
+      "insulin_pair_similarity": 0.979373
+    },
+    "benchmark_original": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 3.93,
+      "std_ms": 0.35,
+      "min_ms": 3.55,
+      "max_ms": 5.21,
+      "throughput_seqs_per_sec": 254.5
+    },
+    "benchmark_sparse": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 3.84,
+      "std_ms": 0.28,
+      "min_ms": 3.52,
+      "max_ms": 4.65,
+      "throughput_seqs_per_sec": 260.8
+    },
+    "speedup": 1.023,
+    "device": "mps",
+    "torch_version": "2.11.0",
+    "model_tag": "8M"
+  },
+  {
+    "model": "facebook/esm2_t6_8M_UR50D",
+    "sparsity_target": 0.5,
+    "pruning_target": "all",
+    "pre_pruning": {
+      "total_params": 7511801,
+      "zero_params": 397,
+      "sparsity_pct": 0.01,
+      "top_layers": {
+        "embeddings.word_embeddings.weight": {
+          "total": 10560,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 409600,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.bias": {
+          "total": 1280,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 409600,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        }
+      }
+    },
+    "post_pruning": {
+      "total_params": 7511801,
+      "zero_params": 3737995,
+      "sparsity_pct": 49.76,
+      "top_layers": {
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 51200,
+          "sparsity": 50.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 51200,
+          "sparsity": 50.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 102400,
+          "zeros": 51200,
+          "sparsity": 50.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 102400,
+          "zeros": 51200,
+          "sparsity": 50.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 409600,
+          "zeros": 204800,
+          "sparsity": 50.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 409600,
+          "zeros": 204800,
+          "sparsity": 50.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 51200,
+          "sparsity": 50.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 51200,
+          "sparsity": 50.0
+        },
+        "encoder.layer.1.attention.self.value.weight": {
+          "total": 102400,
+          "zeros": 51200,
+          "sparsity": 50.0
+        },
+        "encoder.layer.1.attention.output.dense.weight": {
+          "total": 102400,
+          "zeros": 51200,
+          "sparsity": 50.0
+        }
+      }
+    },
+    "quality": {
+      "per_protein_cosine_similarity": {
+        "insulin_human": 0.7886880040168762,
+        "insulin_mouse": 0.7652919888496399,
+        "egfr_fragment": 0.7870839834213257,
+        "p53_fragment": 0.8431119918823242,
+        "hemoglobin_a": 0.8448650240898132,
+        "lysozyme": 0.7816550135612488,
+        "ubiquitin": 0.7569220066070557,
+        "cytochrome_c": 0.7746660113334656
+      },
+      "average_cosine_similarity": 0.792786,
+      "pairwise_rank_correlation": 0.738369,
+      "insulin_pair_similarity": 0.982347
+    },
+    "benchmark_original": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 3.65,
+      "std_ms": 0.24,
+      "min_ms": 3.49,
+      "max_ms": 4.6,
+      "throughput_seqs_per_sec": 273.7
+    },
+    "benchmark_sparse": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 3.74,
+      "std_ms": 0.41,
+      "min_ms": 3.01,
+      "max_ms": 4.76,
+      "throughput_seqs_per_sec": 267.7
+    },
+    "speedup": 0.976,
+    "device": "mps",
+    "torch_version": "2.11.0",
+    "model_tag": "8M"
+  },
+  {
+    "model": "facebook/esm2_t6_8M_UR50D",
+    "sparsity_target": 0.7,
+    "pruning_target": "all",
+    "pre_pruning": {
+      "total_params": 7511801,
+      "zero_params": 397,
+      "sparsity_pct": 0.01,
+      "top_layers": {
+        "embeddings.word_embeddings.weight": {
+          "total": 10560,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 409600,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.bias": {
+          "total": 1280,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 409600,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        }
+      }
+    },
+    "post_pruning": {
+      "total_params": 7511801,
+      "zero_params": 5233044,
+      "sparsity_pct": 69.66,
+      "top_layers": {
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 71680,
+          "sparsity": 70.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 71680,
+          "sparsity": 70.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 102400,
+          "zeros": 71680,
+          "sparsity": 70.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 102400,
+          "zeros": 71680,
+          "sparsity": 70.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 409600,
+          "zeros": 286720,
+          "sparsity": 70.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 409600,
+          "zeros": 286720,
+          "sparsity": 70.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 71680,
+          "sparsity": 70.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 71680,
+          "sparsity": 70.0
+        },
+        "encoder.layer.1.attention.self.value.weight": {
+          "total": 102400,
+          "zeros": 71680,
+          "sparsity": 70.0
+        },
+        "encoder.layer.1.attention.output.dense.weight": {
+          "total": 102400,
+          "zeros": 71680,
+          "sparsity": 70.0
+        }
+      }
+    },
+    "quality": {
+      "per_protein_cosine_similarity": {
+        "insulin_human": 0.6172009706497192,
+        "insulin_mouse": 0.6281269788742065,
+        "egfr_fragment": 0.4896880090236664,
+        "p53_fragment": 0.5366420149803162,
+        "hemoglobin_a": 0.6322789788246155,
+        "lysozyme": 0.5816280245780945,
+        "ubiquitin": 0.572206974029541,
+        "cytochrome_c": 0.6767259836196899
+      },
+      "average_cosine_similarity": 0.591812,
+      "pairwise_rank_correlation": 0.661741,
+      "insulin_pair_similarity": 0.983067
+    },
+    "benchmark_original": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 3.59,
+      "std_ms": 0.24,
+      "min_ms": 3.26,
+      "max_ms": 4.35,
+      "throughput_seqs_per_sec": 278.7
+    },
+    "benchmark_sparse": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 3.79,
+      "std_ms": 0.35,
+      "min_ms": 3.47,
+      "max_ms": 5.01,
+      "throughput_seqs_per_sec": 264.2
+    },
+    "speedup": 0.947,
+    "device": "mps",
+    "torch_version": "2.11.0",
+    "model_tag": "8M"
+  },
+  {
+    "model": "facebook/esm2_t6_8M_UR50D",
+    "sparsity_target": 0.9,
+    "pruning_target": "all",
+    "pre_pruning": {
+      "total_params": 7511801,
+      "zero_params": 397,
+      "sparsity_pct": 0.01,
+      "top_layers": {
+        "embeddings.word_embeddings.weight": {
+          "total": 10560,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 409600,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.bias": {
+          "total": 1280,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 409600,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 0,
+          "sparsity": 0.0
+        }
+      }
+    },
+    "post_pruning": {
+      "total_params": 7511801,
+      "zero_params": 6728108,
+      "sparsity_pct": 89.57,
+      "top_layers": {
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 92160,
+          "sparsity": 90.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 92160,
+          "sparsity": 90.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 102400,
+          "zeros": 92160,
+          "sparsity": 90.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 102400,
+          "zeros": 92160,
+          "sparsity": 90.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 409600,
+          "zeros": 368640,
+          "sparsity": 90.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 409600,
+          "zeros": 368640,
+          "sparsity": 90.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 102400,
+          "zeros": 92160,
+          "sparsity": 90.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 102400,
+          "zeros": 92160,
+          "sparsity": 90.0
+        },
+        "encoder.layer.1.attention.self.value.weight": {
+          "total": 102400,
+          "zeros": 92160,
+          "sparsity": 90.0
+        },
+        "encoder.layer.1.attention.output.dense.weight": {
+          "total": 102400,
+          "zeros": 92160,
+          "sparsity": 90.0
+        }
+      }
+    },
+    "quality": {
+      "per_protein_cosine_similarity": {
+        "insulin_human": -0.27667999267578125,
+        "insulin_mouse": -0.2619670033454895,
+        "egfr_fragment": -0.1324079930782318,
+        "p53_fragment": -0.26533499360084534,
+        "hemoglobin_a": 0.07417099922895432,
+        "lysozyme": -0.1144540011882782,
+        "ubiquitin": -0.10909800231456757,
+        "cytochrome_c": 0.0676800012588501
+      },
+      "average_cosine_similarity": -0.127261,
+      "pairwise_rank_correlation": 0.592228,
+      "insulin_pair_similarity": 0.988731
+    },
+    "benchmark_original": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 3.71,
+      "std_ms": 0.3,
+      "min_ms": 3.46,
+      "max_ms": 4.82,
+      "throughput_seqs_per_sec": 269.5
+    },
+    "benchmark_sparse": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 3.61,
+      "std_ms": 0.15,
+      "min_ms": 3.31,
+      "max_ms": 4.0,
+      "throughput_seqs_per_sec": 276.7
+    },
+    "speedup": 1.028,
+    "device": "mps",
+    "torch_version": "2.11.0",
+    "model_tag": "8M"
+  },
+  {
+    "model": "/tmp/esm2_35m",
+    "sparsity_target": 0.3,
+    "pruning_target": "all",
+    "pre_pruning": {
+      "total_params": 33500401,
+      "zero_params": 673,
+      "sparsity_pct": 0.0,
+      "top_layers": {
+        "embeddings.word_embeddings.weight": {
+          "total": 15840,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 921600,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.bias": {
+          "total": 1920,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 921600,
+          "zeros": 1,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        }
+      }
+    },
+    "post_pruning": {
+      "total_params": 33500401,
+      "zero_params": 10023059,
+      "sparsity_pct": 29.92,
+      "top_layers": {
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 69120,
+          "sparsity": 30.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 69120,
+          "sparsity": 30.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 230400,
+          "zeros": 69120,
+          "sparsity": 30.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 230400,
+          "zeros": 69120,
+          "sparsity": 30.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 921600,
+          "zeros": 276480,
+          "sparsity": 30.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 921600,
+          "zeros": 276480,
+          "sparsity": 30.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 69120,
+          "sparsity": 30.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 69120,
+          "sparsity": 30.0
+        },
+        "encoder.layer.1.attention.self.value.weight": {
+          "total": 230400,
+          "zeros": 69120,
+          "sparsity": 30.0
+        },
+        "encoder.layer.1.attention.output.dense.weight": {
+          "total": 230400,
+          "zeros": 69120,
+          "sparsity": 30.0
+        }
+      }
+    },
+    "quality": {
+      "per_protein_cosine_similarity": {
+        "insulin_human": 0.9721699953079224,
+        "insulin_mouse": 0.9621409773826599,
+        "egfr_fragment": 0.9757459759712219,
+        "p53_fragment": 0.966916024684906,
+        "hemoglobin_a": 0.9793919920921326,
+        "lysozyme": 0.9622420072555542,
+        "ubiquitin": 0.9440000057220459,
+        "cytochrome_c": 0.9542700052261353
+      },
+      "average_cosine_similarity": 0.96461,
+      "pairwise_rank_correlation": 0.953476,
+      "insulin_pair_similarity": 0.975566
+    },
+    "benchmark_original": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 8.56,
+      "std_ms": 0.35,
+      "min_ms": 8.17,
+      "max_ms": 9.51,
+      "throughput_seqs_per_sec": 116.8
+    },
+    "benchmark_sparse": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 6.0,
+      "std_ms": 0.18,
+      "min_ms": 5.79,
+      "max_ms": 6.43,
+      "throughput_seqs_per_sec": 166.7
+    },
+    "speedup": 1.427,
+    "device": "mps",
+    "torch_version": "2.11.0",
+    "model_tag": "35M"
+  },
+  {
+    "model": "/tmp/esm2_35m",
+    "sparsity_target": 0.5,
+    "pruning_target": "all",
+    "pre_pruning": {
+      "total_params": 33500401,
+      "zero_params": 673,
+      "sparsity_pct": 0.0,
+      "top_layers": {
+        "embeddings.word_embeddings.weight": {
+          "total": 15840,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 921600,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.bias": {
+          "total": 1920,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 921600,
+          "zeros": 1,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        }
+      }
+    },
+    "post_pruning": {
+      "total_params": 33500401,
+      "zero_params": 16704659,
+      "sparsity_pct": 49.86,
+      "top_layers": {
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 115200,
+          "sparsity": 50.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 115200,
+          "sparsity": 50.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 230400,
+          "zeros": 115200,
+          "sparsity": 50.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 230400,
+          "zeros": 115200,
+          "sparsity": 50.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 921600,
+          "zeros": 460800,
+          "sparsity": 50.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 921600,
+          "zeros": 460800,
+          "sparsity": 50.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 115200,
+          "sparsity": 50.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 115200,
+          "sparsity": 50.0
+        },
+        "encoder.layer.1.attention.self.value.weight": {
+          "total": 230400,
+          "zeros": 115200,
+          "sparsity": 50.0
+        },
+        "encoder.layer.1.attention.output.dense.weight": {
+          "total": 230400,
+          "zeros": 115200,
+          "sparsity": 50.0
+        }
+      }
+    },
+    "quality": {
+      "per_protein_cosine_similarity": {
+        "insulin_human": 0.9178829789161682,
+        "insulin_mouse": 0.9191319942474365,
+        "egfr_fragment": 0.920665979385376,
+        "p53_fragment": 0.9336360096931458,
+        "hemoglobin_a": 0.9500190019607544,
+        "lysozyme": 0.9186660051345825,
+        "ubiquitin": 0.7709019780158997,
+        "cytochrome_c": 0.8732290267944336
+      },
+      "average_cosine_similarity": 0.900517,
+      "pairwise_rank_correlation": 0.558292,
+      "insulin_pair_similarity": 0.995582
+    },
+    "benchmark_original": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 8.46,
+      "std_ms": 0.17,
+      "min_ms": 8.22,
+      "max_ms": 8.78,
+      "throughput_seqs_per_sec": 118.2
+    },
+    "benchmark_sparse": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 5.97,
+      "std_ms": 0.2,
+      "min_ms": 5.69,
+      "max_ms": 6.42,
+      "throughput_seqs_per_sec": 167.6
+    },
+    "speedup": 1.417,
+    "device": "mps",
+    "torch_version": "2.11.0",
+    "model_tag": "35M"
+  },
+  {
+    "model": "/tmp/esm2_35m",
+    "sparsity_target": 0.7,
+    "pruning_target": "all",
+    "pre_pruning": {
+      "total_params": 33500401,
+      "zero_params": 673,
+      "sparsity_pct": 0.0,
+      "top_layers": {
+        "embeddings.word_embeddings.weight": {
+          "total": 15840,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 921600,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.bias": {
+          "total": 1920,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 921600,
+          "zeros": 1,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        }
+      }
+    },
+    "post_pruning": {
+      "total_params": 33500401,
+      "zero_params": 23386259,
+      "sparsity_pct": 69.81,
+      "top_layers": {
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 161280,
+          "sparsity": 70.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 161280,
+          "sparsity": 70.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 230400,
+          "zeros": 161280,
+          "sparsity": 70.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 230400,
+          "zeros": 161280,
+          "sparsity": 70.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 921600,
+          "zeros": 645120,
+          "sparsity": 70.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 921600,
+          "zeros": 645120,
+          "sparsity": 70.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 161280,
+          "sparsity": 70.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 161280,
+          "sparsity": 70.0
+        },
+        "encoder.layer.1.attention.self.value.weight": {
+          "total": 230400,
+          "zeros": 161280,
+          "sparsity": 70.0
+        },
+        "encoder.layer.1.attention.output.dense.weight": {
+          "total": 230400,
+          "zeros": 161280,
+          "sparsity": 70.0
+        }
+      }
+    },
+    "quality": {
+      "per_protein_cosine_similarity": {
+        "insulin_human": 0.8390989899635315,
+        "insulin_mouse": 0.8404070138931274,
+        "egfr_fragment": 0.8494930267333984,
+        "p53_fragment": 0.8550019860267639,
+        "hemoglobin_a": 0.909367024898529,
+        "lysozyme": 0.873075008392334,
+        "ubiquitin": 0.7356659770011902,
+        "cytochrome_c": 0.8452519774436951
+      },
+      "average_cosine_similarity": 0.84342,
+      "pairwise_rank_correlation": 0.524904,
+      "insulin_pair_similarity": 0.993633
+    },
+    "benchmark_original": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 8.59,
+      "std_ms": 0.44,
+      "min_ms": 8.13,
+      "max_ms": 9.59,
+      "throughput_seqs_per_sec": 116.4
+    },
+    "benchmark_sparse": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 6.24,
+      "std_ms": 0.24,
+      "min_ms": 5.86,
+      "max_ms": 6.75,
+      "throughput_seqs_per_sec": 160.4
+    },
+    "speedup": 1.377,
+    "device": "mps",
+    "torch_version": "2.11.0",
+    "model_tag": "35M"
+  },
+  {
+    "model": "/tmp/esm2_35m",
+    "sparsity_target": 0.9,
+    "pruning_target": "all",
+    "pre_pruning": {
+      "total_params": 33500401,
+      "zero_params": 673,
+      "sparsity_pct": 0.0,
+      "top_layers": {
+        "embeddings.word_embeddings.weight": {
+          "total": 15840,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 921600,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.intermediate.dense.bias": {
+          "total": 1920,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 921600,
+          "zeros": 1,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 0,
+          "sparsity": 0.0
+        }
+      }
+    },
+    "post_pruning": {
+      "total_params": 33500401,
+      "zero_params": 30067896,
+      "sparsity_pct": 89.75,
+      "top_layers": {
+        "encoder.layer.0.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 207360,
+          "sparsity": 90.0
+        },
+        "encoder.layer.0.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 207360,
+          "sparsity": 90.0
+        },
+        "encoder.layer.0.attention.self.value.weight": {
+          "total": 230400,
+          "zeros": 207360,
+          "sparsity": 90.0
+        },
+        "encoder.layer.0.attention.output.dense.weight": {
+          "total": 230400,
+          "zeros": 207360,
+          "sparsity": 90.0
+        },
+        "encoder.layer.0.intermediate.dense.weight": {
+          "total": 921600,
+          "zeros": 829440,
+          "sparsity": 90.0
+        },
+        "encoder.layer.0.output.dense.weight": {
+          "total": 921600,
+          "zeros": 829440,
+          "sparsity": 90.0
+        },
+        "encoder.layer.1.attention.self.query.weight": {
+          "total": 230400,
+          "zeros": 207360,
+          "sparsity": 90.0
+        },
+        "encoder.layer.1.attention.self.key.weight": {
+          "total": 230400,
+          "zeros": 207360,
+          "sparsity": 90.0
+        },
+        "encoder.layer.1.attention.self.value.weight": {
+          "total": 230400,
+          "zeros": 207360,
+          "sparsity": 90.0
+        },
+        "encoder.layer.1.attention.output.dense.weight": {
+          "total": 230400,
+          "zeros": 207360,
+          "sparsity": 90.0
+        }
+      }
+    },
+    "quality": {
+      "per_protein_cosine_similarity": {
+        "insulin_human": 0.6054540276527405,
+        "insulin_mouse": 0.6511359810829163,
+        "egfr_fragment": 0.6383739709854126,
+        "p53_fragment": 0.7362130284309387,
+        "hemoglobin_a": 0.6494629979133606,
+        "lysozyme": 0.6518290042877197,
+        "ubiquitin": 0.6093980073928833,
+        "cytochrome_c": 0.6591240167617798
+      },
+      "average_cosine_similarity": 0.650124,
+      "pairwise_rank_correlation": 0.384784,
+      "insulin_pair_similarity": 0.99079
+    },
+    "benchmark_original": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 8.55,
+      "std_ms": 0.41,
+      "min_ms": 8.17,
+      "max_ms": 9.56,
+      "throughput_seqs_per_sec": 117.0
+    },
+    "benchmark_sparse": {
+      "device": "mps",
+      "n_runs": 20,
+      "mean_ms": 6.33,
+      "std_ms": 0.31,
+      "min_ms": 5.98,
+      "max_ms": 7.17,
+      "throughput_seqs_per_sec": 157.9
+    },
+    "speedup": 1.351,
+    "device": "mps",
+    "torch_version": "2.11.0",
+    "model_tag": "35M"
+  }
+]
