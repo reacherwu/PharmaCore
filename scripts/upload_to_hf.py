@@ -37,13 +37,13 @@ for efficient drug discovery on Apple Silicon.
 ```python
 from transformers import AutoModel, AutoTokenizer
 
-model = AutoModel.from_pretrained("reacherwu/{model_name}")
+model = AutoModel.from_pretrained("stephenjun8192/{model_name}")
 tokenizer = AutoTokenizer.from_pretrained("{base_model}")
 ```
 
 ## Part of PharmaCore
 
-[PharmaCore](https://github.com/reacherwu/PharmaCore) — Apple Silicon-native AI drug discovery platform.
+[PharmaCore](https://github.com/stephenjun8192/PharmaCore) — Apple Silicon-native AI drug discovery platform.
 """
 
 
@@ -54,7 +54,7 @@ def upload_models():
     models = [
         {
             "dir": "models/esm2-8m-sparse50",
-            "repo": "reacherwu/esm2-8m-sparse50",
+            "repo": "stephenjun8192/esm2-8m-sparse50",
             "name": "esm2-8m-sparse50",
             "base": "facebook/esm2_t6_8M_UR50D",
             "sparsity": 0.50,
@@ -62,7 +62,7 @@ def upload_models():
         },
         {
             "dir": "models/esm2-35m-sparse50",
-            "repo": "reacherwu/esm2-35m-sparse50",
+            "repo": "stephenjun8192/esm2-35m-sparse50",
             "name": "esm2-35m-sparse50",
             "base": "facebook/esm2_t12_35M_UR50D",
             "sparsity": 0.50,
@@ -70,7 +70,7 @@ def upload_models():
         },
         {
             "dir": "models/chemberta-zinc-sparse50",
-            "repo": "reacherwu/chemberta-zinc-sparse50",
+            "repo": "stephenjun8192/chemberta-zinc-sparse50",
             "name": "chemberta-zinc-sparse50",
             "base": "seyonec/ChemBERTa-zinc-base-v1",
             "sparsity": 0.50,
