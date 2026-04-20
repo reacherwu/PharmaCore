@@ -1,0 +1,52 @@
+{
+  "model": "seyonec/ChemBERTa-zinc-base-v1",
+  "model_key": "chemberta-zinc",
+  "domain": "molecule",
+  "target_sparsity": 0.5,
+  "actual_sparsity": 0.4882,
+  "parameters": {
+    "total": 44103936,
+    "nonzero": 44103168,
+    "zero": 768,
+    "sparsity": 0.0
+  },
+  "sparse_parameters": {
+    "total": 44103936,
+    "nonzero": 22574592,
+    "zero": 21529344,
+    "sparsity": 0.4882
+  },
+  "quality": {
+    "mean_cosine_similarity": 0.9728,
+    "rank_correlation": 0.9753,
+    "per_sample": {
+      "aspirin": 0.9728,
+      "caffeine": 0.9741,
+      "dexamethasone": 0.9769,
+      "erlotinib": 0.9662,
+      "ibuprofen": 0.9671,
+      "metformin": 0.9761,
+      "paracetamol": 0.9684,
+      "penicillin_g": 0.9753,
+      "remdesivir": 0.9768,
+      "sorafenib": 0.9744
+    },
+    "n_samples": 10
+  },
+  "speed_baseline": {
+    "mean_ms": 4.22,
+    "std_ms": 0.19,
+    "min_ms": 3.91,
+    "n_runs": 20
+  },
+  "speed_sparse": {
+    "mean_ms": 4.26,
+    "std_ms": 0.23,
+    "min_ms": 3.9,
+    "n_runs": 20
+  },
+  "speedup": 0.9906,
+  "timestamp": "2026-04-20T02:37:47",
+  "device": "mps",
+  "engine": "PharmaCore Sparsification Engine v2.0"
+}

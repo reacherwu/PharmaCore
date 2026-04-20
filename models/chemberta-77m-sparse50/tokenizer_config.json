@@ -1,0 +1,18 @@
+{
+  "add_prefix_space": false,
+  "backend": "tokenizers",
+  "bos_token": "<s>",
+  "cls_token": "[CLS]",
+  "eos_token": "</s>",
+  "errors": "replace",
+  "full_tokenizer_file": null,
+  "is_local": false,
+  "mask_token": "[MASK]",
+  "max_len": 512,
+  "model_max_length": 512,
+  "pad_token": "[PAD]",
+  "sep_token": "[SEP]",
+  "tokenizer_class": "RobertaTokenizer",
+  "trim_offsets": true,
+  "unk_token": "[UNK]"
+}

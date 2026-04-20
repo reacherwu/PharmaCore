@@ -1,0 +1,52 @@
+{
+  "model": "DeepChem/ChemBERTa-77M-MTR",
+  "model_key": "chemberta-77m",
+  "domain": "molecule",
+  "target_sparsity": 0.5,
+  "actual_sparsity": 0.4359,
+  "parameters": {
+    "total": 3427440,
+    "nonzero": 3426288,
+    "zero": 1152,
+    "sparsity": 0.0003
+  },
+  "sparse_parameters": {
+    "total": 3427440,
+    "nonzero": 1933296,
+    "zero": 1494144,
+    "sparsity": 0.4359
+  },
+  "quality": {
+    "mean_cosine_similarity": 0.2927,
+    "rank_correlation": 0.516,
+    "per_sample": {
+      "aspirin": 0.4494,
+      "caffeine": 0.5099,
+      "dexamethasone": 0.1249,
+      "erlotinib": 0.0931,
+      "ibuprofen": 0.3268,
+      "metformin": 0.2433,
+      "paracetamol": 0.3013,
+      "penicillin_g": 0.4546,
+      "remdesivir": 0.2455,
+      "sorafenib": 0.1782
+    },
+    "n_samples": 10
+  },
+  "speed_baseline": {
+    "mean_ms": 2.24,
+    "std_ms": 0.27,
+    "min_ms": 1.91,
+    "n_runs": 20
+  },
+  "speed_sparse": {
+    "mean_ms": 1.83,
+    "std_ms": 0.23,
+    "min_ms": 1.57,
+    "n_runs": 20
+  },
+  "speedup": 1.224,
+  "timestamp": "2026-04-20T02:36:01",
+  "device": "mps",
+  "engine": "PharmaCore Sparsification Engine v2.0"
+}
